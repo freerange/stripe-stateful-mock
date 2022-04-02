@@ -10,6 +10,7 @@ import {products} from "./api/products";
 import {refunds} from "./api/refunds";
 import {subscriptions} from "./api/subscriptions";
 import {taxRates} from "./api/taxRates";
+import {tokens} from "./api/tokens";
 import {expandList, expandObject} from "./api/utils";
 
 const routes = express.Router();
@@ -274,6 +275,16 @@ routes.get("/v1/tax_rates/:id", (req, res) => {
 routes.post("/v1/tax_rates/:id", (req, res) => {
     const taxRate = taxRates.update(getRequestAccountId(req), req.params.id, req.body);
     return res.status(200).json(taxRate);
+});
+
+routes.post("/v1/tokens", (req, res) => {
+    const token = tokens.create(req.body);
+    return res.status(200).json(token);
+});
+
+routes.get("/v1/tokens/:id", (req, res) => {
+    const token = tokens.retrieve(req.params.id);
+    return res.status(200).json(token);
 });
 
 routes.all("*", (req, res) => {
