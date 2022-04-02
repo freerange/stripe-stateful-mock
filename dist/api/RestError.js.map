@@ -1,0 +1,1 @@
+{"version":3,"file":"RestError.js","sourceRoot":"","sources":["../../src/api/RestError.ts"],"names":[],"mappings":";;;AAEA,MAAa,SAAU,SAAQ,KAAK;IAEhC,YAAmB,UAAkB,EAAS,KAAgC;QAC1E,KAAK,CAAC,KAAK,CAAC,OAAO,CAAC,CAAC;QADN,eAAU,GAAV,UAAU,CAAQ;QAAS,UAAK,GAAL,KAAK,CAA2B;IAE9E,CAAC;CACJ;AALD,8BAKC"}
